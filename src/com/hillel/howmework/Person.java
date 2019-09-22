@@ -24,15 +24,12 @@ public class Person {
         return weight;
     }*/
 
-    public Person (int age, int height, int weight){
-        this.age = age;
-        this.height = height;
-        this.weight = weight;
+    public Person (){
     }
     @Override
     public String toString (){
-        return "Меня зовут " + firstName + " " + lastName +
-                ". \nМне " + age + " лет." +
-                "\nМой рост " + height + " и мой вес " + weight;
+        return "Hello, my name is " + firstName + " " + lastName +
+                ". \nI`m " + age + " y.o." +
+                "\nMy height is " + height + " miters and my weight is " + weight + ".";
     }
 }
