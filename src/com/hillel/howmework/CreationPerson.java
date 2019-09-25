@@ -37,16 +37,16 @@ public class CreationPerson extends Person {
     }
     private static int getRandomWeight(){
         Random generate = new Random();
-        int[] weight = {60, 81, 80, 100};
+        int[] weight = {60, 80, 81, 100};
         int[] height = {165, 200};
         int mainWeight =0;
         int averageHeight = (height[1]-height[0]) / 2 + height[0];
         if (CreationPerson.height > height[0] && CreationPerson.height <= averageHeight){
-            int diff = weight[2] - weight[0];
+            int diff = weight[1] - weight[0];
             return generate.nextInt(diff+1) + weight[0];
         }else if (CreationPerson.height > averageHeight && CreationPerson.height <= height[1]){
-            int diff = weight[3] - weight[1];
-            return generate.nextInt(diff+1) + weight[1];
+            int diff = weight[3] - weight[2];
+            return generate.nextInt(diff+1) + weight[2];
         }return mainWeight;
     }
 }
