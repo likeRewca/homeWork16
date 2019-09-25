@@ -5,33 +5,40 @@ import java.util.Random;
 public class CreationPerson extends Person {
     protected static int height;
 
-    public CreationPerson(String[] firstNameArray, String [] lastNameArray, int[] ageArray, int[] heightArray, int[] weightArray){
-        super(firstName(firstNameArray),
-                lastName(lastNameArray),
-                getAge(ageArray),
-                CreationPerson.height = getHeight(heightArray),
-                getWeight(weightArray,heightArray));
+    public CreationPerson(){
+        super(firstName(),
+                lastName(),
+                getRandomAge(),
+                CreationPerson.height = getRandomHeight(),
+                getRandomWeight());
     }
-    private static String firstName(String[] firstName) {
+    private static String firstName() {
         Random generate = new Random();
-        return firstName[generate.nextInt(8)];
+        String[] firstName = {"John", "Marcus", "Susan", "Henry", "Harry", "Ron", "Barrie", "Fabian",
+                "Mary", "Camilla", "Susan", "Daysie", "Alexis", "Adele", "Emma", "Gloria"};
+        return firstName[generate.nextInt(16)];
     }
-    private static String lastName(String[] lastName) {
+    private static String lastName() {
         Random generate = new Random();
+        String[] lastName = {"Smith", "Johnson", "Brown", "Aly", "Davis", "Potter", "Wilson", "Black"};;
         return lastName[generate.nextInt(8)];
     }
-    private static int getAge(int[] age){
+    private static int getRandomAge(){
         Random generate = new Random();
+        int[] age = {20, 40};
         int diff = age[1] - age[0];
         return generate.nextInt(diff+1) + age[0];
     }
-    private static int getHeight(int[] height){
+    private static int getRandomHeight(){
         Random generate = new Random();
+        int[] height = {165, 200};
         int diff = height[1] - height[0];
         return generate.nextInt(diff+1) + height[0];
     }
-    private static int getWeight(int[] weight, int[] height){
+    private static int getRandomWeight(){
         Random generate = new Random();
+        int[] weight = {60, 81, 80, 100};
+        int[] height = {165, 200};
         int mainWeight =0;
         int averageHeight = (height[1]-height[0]) / 2 + height[0];
         if (CreationPerson.height > height[0] && CreationPerson.height <= averageHeight){

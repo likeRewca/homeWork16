@@ -1,7 +1,7 @@
-package com.hillel.howmework;
+/*package com.hillel.howmework;
 
 
-public class Man extends CreationPerson {
+public class Man extends Person {
     protected static String[] firstName = {"John", "Marcus", "Susan", "Henry", "Harry", "Ron", "Barrie", "Fabian"};
     protected static String[] lastName = {"Smith", "Johnson", "Brown", "Aly", "Davis", "Potter", "Wilson", "Black"};
     protected static int[] age = {20, 40};
@@ -12,4 +12,4 @@ public class Man extends CreationPerson {
         super(firstName, lastName, age, height, weight);
     }
 
-}
+}*/

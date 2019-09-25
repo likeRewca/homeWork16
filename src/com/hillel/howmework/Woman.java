@@ -1,7 +1,8 @@
+/*
 
 package com.hillel.howmework;
 
-public class Woman extends CreationPerson {
+public class Woman extends Person {
     protected static String[] firstName = {"Mary", "Camilla", "Susan", "Daysie", "Alexis", "Adele", "Emma", "Gloria"};
     protected static String[] lastName = {"Smith", "Johnson", "Brown", "Aly", "Davis", "Potter", "Wilson", "Black"};
     protected static int[] age = {20, 40};
@@ -13,3 +14,4 @@ public class Woman extends CreationPerson {
 
 }
 
+*/
