@@ -3,35 +3,32 @@ package com.hillel.howmework;
 import java.util.Random;
 
 public class CreationPerson {
+    private static Random generate = new Random();
 
-
-    public CreationPerson(){
+    public static Person creationPerson(){
+        return new Person(getFirstName(), getLastName(), getRandomAge(), getRandomHeight(), getRandomWeight(getRandomHeight()));
     }
-    public String getFirstName() {
+    private static String getFirstName() {
         Random generate = new Random();
         String[] firstName = {"John", "Marcus", "Susan", "Henry", "Harry", "Ron", "Barrie", "Fabian",
                 "Mary", "Camilla", "Susan", "Daysie", "Alexis", "Adele", "Emma", "Gloria"};
         return firstName[generate.nextInt(16)];
     }
-    public String getLastName() {
-        Random generate = new Random();
+    private static String getLastName() {
         String[] lastName = {"Smith", "Johnson", "Brown", "Aly", "Davis", "Potter", "Wilson", "Black"};;
         return lastName[generate.nextInt(8)];
     }
-    public int getRandomAge(){
-        Random generate = new Random();
+    private static int getRandomAge(){
         int[] age = {20, 40};
         int diff = age[1] - age[0];
         return generate.nextInt(diff+1) + age[0];
     }
-    public int getRandomHeight(){
-        Random generate = new Random();
+    private static int getRandomHeight(){
         int[] height = {165, 200};
         int diff = height[1] - height[0];
         return generate.nextInt(diff+1) + height[0];
     }
-    public int getRandomWeight(int nowHeight){
-        Random generate = new Random();
+    private static int getRandomWeight(int nowHeight){
         int[] weight = {60, 80, 81, 100};
         int[] height = {165, 200};
         int mainWeight =0;
