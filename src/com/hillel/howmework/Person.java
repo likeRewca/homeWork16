@@ -2,19 +2,12 @@ package com.hillel.howmework;
 
 public class Person {
 
-    protected String firstName;
-    protected String lastName;
-    protected int age;
-    protected int height;
-    protected int weight;
 
-    public Person(String firstName, String lastName, int age, int height, int weight){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-        this.height = height;
-        this.weight = weight;
-    }
+    private String firstName;
+    private String lastName;
+    private int age;
+    private int height;
+    private int weight;
 
     public String getFirstName() {
         return firstName;
@@ -30,6 +23,15 @@ public class Person {
     }
     public int getWeight() {
         return weight;
+    }
+
+    private static CreationPerson person_data = new CreationPerson();
+    public Person(){
+        this.firstName = person_data.getFirstName();
+        this.lastName = person_data.getLastName();
+        this.age = person_data.getRandomAge();
+        this.height = person_data.getRandomHeight();
+        this.weight = person_data.getRandomWeight(this.height);
     }
 
     @Override
